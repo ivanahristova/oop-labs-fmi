@@ -1,20 +1,25 @@
 # Сложност
-```
-Скоростта на нарастването на времето и паметта, необходими за изпълнението на даден алгоритъм, с нарастването на входните данни.
-```
-> Ще означаваме размера на входните данни с **n**.
+**Сложност:** Скоростта на нарастването на времето и паметта, необходими за изпълнението на даден алгоритъм, с нарастването на входните данни.
+
+Ще означаваме размера на входните данни с **n**.
+
+* ## Сложност по време
+Как расте времето за изпълнение при нарастване на входа?
+
+* ## Сложност по памет
+Как расте необходимата памет при нарастване на входа?
 
 * ## Нотации
     * #### <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O"> **(Big-O) notation**:
-        * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O(f)"> - множеството от всички функции, които растат **не** по-бързо от <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}f"> \
-    <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O(f)=\{g\ |\ g \preceq f\}"> \
-    e.g. <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O(n^2)=\{n^2,n,1,\log n, \ldots\}"> 
+        * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O(f)"> - множеството от всички функции, които растат **не** по-бързо от <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}f">
+      * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O(f)=\{g\ |\ g \preceq f\}">
+      * e.g. <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O(n^2)=\{n^2,n,1,\log n, \ldots\}"> 
     * #### <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\Omega"> **(Big-Omega) notation**:
-        * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\Omega(f)"> - множеството от всички функции, които растат **не** по-бавно от <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}f"> \
-        <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\Omega(f)=\{g\ |\ g \succeq f\}">
+        * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\Omega(f)"> - множеството от всички функции, които растат **не** по-бавно от <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}f">
+        * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\Omega(f)=\{g\ |\ g \succeq f\}">
     * #### <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\Theta"> **(Theta) notation**:
-        * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\Theta(f)"> - множеството от всички функции, които растат със скоростта на <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}f"> \
-        <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\Theta(f)=\{g\ |\ g \simeq f\}">
+        * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\Theta(f)"> - множеството от всички функции, които растат със скоростта на <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}f">
+        * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\Theta(f)=\{g\ |\ g \simeq f\}">
 
 :round_pushpin:
 <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\forall \! \! f\ \ \ O(f) \cap \Omega(f) = \Theta(f)">
@@ -45,19 +50,12 @@
         *  <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O(n^n)">
         * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O(2^{n^2})">
 
-:warning:\
-<img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\log(n) \prec \sqrt{n} \prec n \prec n \log n \prec n^2 \prec 2^n">\
-<img src="https://render.githubusercontent.com/render/math?math=\color{orangered}n^0.3 \prec \sqrt{n} \prec n \prec n \log n \prec n^2 \prec 5^{\log(n)} \prec 3^n \prec 2^{2^n}">
+:warning: **Нарастваща наредба**\
+<img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\log(n) \prec \sqrt{n} \prec n \prec n \log n \prec n^2 \prec n^3 \prec 2^n \prec n! \prec n^n \prec 2^{n^2}">
 
-* ## Сложност по време
-> Как расте времето за изпълнение при нарастване на входа?
-
-* ## Сложност по памет
-> Как расте необходимата памет при нарастване на входа?
-
-* ## 
-
-| n | 10 | 100 | 1 000 | 100 000 | 1 000 000 | 100 000 000 |
+* ## Нарастване спрямо *n*
+  
+| *n* | 10 | 100 | 1 000 | 100 000 | 1 000 000 | 100 000 000 |
 | --- | --- | --- | --- | --- | --- | --- |
 | <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}const = 5"> | 5 | 5 | 5 | 5 | 5 | 5 |
 | <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\log(n)"> | 3 | 6 | 9 | 16 | 19 | 26 |
