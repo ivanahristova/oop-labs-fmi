@@ -13,7 +13,7 @@
     * #### <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O"> **(Big-O) notation**:
         * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O(f)"> - множеството от всички функции, които растат **не** по-бързо от <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}f">
       * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O(f)=\{g\ |\ g \preceq f\}">
-      * e.g. <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O(n^2)=\{n^2,n,1,\log n, \ldots\}"> 
+      * e.g. <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O(n^2)=\{n^2,n,1,\log n, \ldots\}">
     * #### <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\Omega"> **(Big-Omega) notation**:
         * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\Omega(f)"> - множеството от всички функции, които растат **не** по-бавно от <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}f">
         * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\Omega(f)=\{g\ |\ g \succeq f\}">
@@ -30,7 +30,7 @@
 3. Сложността на един алгоритъм отговаря на тази функция, която расте "най-бързо" ("най-тежката" функция)
 
 * ## Често срещани функции
-  1. Константна 
+  1. Константна
         * Практически най-добрата сложност
         * Не зависи от обема на входните данни
         * <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}O(1)">
@@ -54,12 +54,12 @@
 <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\log(n) \prec \sqrt{n} \prec n \prec n \log n \prec n^2 \prec n^3 \prec 2^n \prec n! \prec n^n \prec 2^{n^2}">
 
 * ## Нарастване спрямо *n*
-  
+
 | *n* | 10 | 100 | 1 000 | 100 000 | 1 000 000 | 100 000 000 |
 | --- | --- | --- | --- | --- | --- | --- |
 | <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}const = 5"> | 5 | 5 | 5 | 5 | 5 | 5 |
 | <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}\log(n)"> | 3 | 6 | 9 | 16 | 19 | 26 |
-| <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}n"> | 1 | 100 | 1 000 | 100 000 | 1 000 000 | 100 000 000 |
+| <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}n"> | 10 | 100 | 1 000 | 100 000 | 1 000 000 | 100 000 000 |
 | <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}n \log(n)"> | 33 | 664 | 9 966 | 1 660 964 | 19 931 568 | 2 657 542 475 |
 | <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}n^2"> | 100 | 10 000 | 1 000 000 | 10 000 000 000 | 1 000 000 000 000 | <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}10^16"> |
 | <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}n^3">| 1 000 | 1 000 000 | 1 000 000 000 | <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}10^15"> | <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}10^18"> | <img src="https://render.githubusercontent.com/render/math?math=\color{orangered}10^24"> |
