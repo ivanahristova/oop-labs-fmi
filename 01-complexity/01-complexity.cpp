@@ -15,12 +15,12 @@ double sum_two_double_numbers(double num1, double num2)
 // Space complexity: O(1)
 int sum_first_n_numbers(int n)
 {
-	int sum = 0;
-	for (int i = 1; i <= n; i++)
-	{
+    int sum = 0;
+    for (int i = 1; i <= n; i++)
+    {
         sum += i;
     }
-	return sum; // +1
+    return sum; // +1
 }
 
 // Time complexity: O(1)
@@ -42,7 +42,7 @@ double sum_first_and_last_element(const double arr[], int n)
 double sum_of_array(const double arr[], int n)
 {
     int sum = 0; // +1 (space)
-    for(int i = 0; i < n; i++) // +1 (space);
+    for (int i = 0; i < n; i++) // +1 (space);
     {
         sum += arr[i];
     }
@@ -53,17 +53,17 @@ double sum_of_array(const double arr[], int n)
 
 // Time complexity: O(n)
 // Space complexity: O(1)
-void find_odd_and_even_sum(int* arr, int n, int &oddSum, int &evenSum)
+void find_odd_and_even_sum(int* arr, int n, int &odd_sum, int &even_sum)
 {
     for (int i = 0; i < n; i++)
     {
         if (i % 2 != 0)
         {
-            oddSum += arr[i];
+            odd_sum += arr[i];
         }
         else
         {
-            evenSum += arr[i];
+            even_sum += arr[i];
         }
     }
 }
@@ -87,7 +87,7 @@ double sum_array_elements(const double arr[], int n) // 1 -> 2 -> 4 -> 8 -> 16..
 // WC: O(n) -> последен елемент
 bool linear_search(const int arr[], int n, int element)
 {
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         if (arr[i] == element)
         {
@@ -103,32 +103,32 @@ bool linear_search(const int arr[], int n, int element)
 // A.C.: O(log(n))
 // W.C.: O(log(n))
 // Space complexity: O(1)
-int binary_search(int sortedArray[], int n, int element)
+int binary_search(int sorted_array[], int n, int element)
 {
     int start = 0;
     int end = n - 1;
     int mid = (start + end) / 2;
 
-	while (start <= end)
-	{
-		mid = (start + end) / 2;
-		if (sortedArray[mid] == element)
-		{
+    while (start <= end)
+    {
+        mid = (start + end) / 2;
+        if (sorted_array[mid] == element)
+        {
             return mid;
         }
 
-		if (sortedArray[mid] > element)
-		{
+        if (sorted_array[mid] > element)
+        {
             end = mid - 1;
         }
 
         else
-		{
+        {
             start = mid + 1;
-	    }
+        }
     }
 
-	return -1;
+    return -1;
 }
 
 // Time complexity:
@@ -138,24 +138,24 @@ int binary_search(int sortedArray[], int n, int element)
 // Space complexity: O(log(n))
 int binary_search_recursive(int* arr, int start, int end, int element)
 {
-	if (start > end)
-	{
+    if (start > end)
+    {
         return -1;
     }
 
-	int mid = (start + end) / 2;
+    int mid = (start + end) / 2;
 
     if (arr[mid] == element)
-	{
+    {
         return mid;
     }
 
-	if (arr[mid] > element)
-	{
+    if (arr[mid] > element)
+    {
         return binary_search_recursive(arr, start, mid - 1, element);
     }
-	else
-	{
+    else
+    {
         return binary_search_recursive(arr, mid + 1, end, element);
     }
 }
@@ -167,11 +167,11 @@ int binary_search_recursive(int* arr, int start, int end, int element)
 // Space complexity: O(1)
 int sum_powers_of_two_until_n(int n)
 {
-	int res = 0;
-	for (int i = 1; i <= n; i *= 2)
-	{
-		res += i;
-	}
+    int res = 0;
+    for (int i = 1; i <= n; i *= 2)
+    {
+        res += i;
+    }
     return res;
 }
 
@@ -191,16 +191,16 @@ int sum_powers_of_two_until_n_const(int n) // 1000 = 15 // n = 5;  1 2 4: 7 // n
 // Space complexity: O(1)
 bool is_power_of_two(int n) // n = 16 -> 8 -> 4 -> 2 -> 1 -> 0
 {
-	while (n > 1)
-	{
-		if (n % 2 == 1) // 46 / 2 = 23
-		{
+    while (n > 1)
+    {
+        if (n % 2 == 1) // 46 / 2 = 23
+        {
             return false;
         }
 
-		n /= 2; // 16 / 8
-	}
-	return true;
+        n /= 2; // 16 / 8
+    }
+    return true;
 }
 
 // n е степен на двойката когато двоичната му репрезентация съдържа 1 единица
@@ -218,25 +218,25 @@ bool is_power_of_two_constant(int n)
 // Space complexity: O(1)
 int count_of_odd_numbers(const int arr1[], const int n, const int arr2[], const int m)
 {
-    int oddCount1 = 0;
+    int odd_count_1 = 0;
     for (int i = 0; i < n; i++)
     {
         if (arr1[i] % 2)
         {
-            oddCount1++;
+            odd_count_1++;
         }
     }
 
-    int oddCount2 = 0;
+    int odd_count_2 = 0;
     for (int i = 0; i < m; i++)
     {
          if (arr2[i] % 2)
         {
-            oddCount2++;
+            odd_count_2++;
         }
     }
 
-    return oddCount1 + oddCount2;
+    return odd_count_1 + odd_count_2;
 }
 
 // 1 2 3 4
@@ -244,8 +244,8 @@ int count_of_odd_numbers(const int arr1[], const int n, const int arr2[], const 
 
 // Time complexity:
 // B.C.: O(1)
-// A.C.: O(n^2)
-// W.C.: O(n^2)
+// A.C.: O(n*m)
+// W.C.: O(n*m)
 bool contain_shared_element(const int arr1[], int n, const int arr2[], int m)
 {
     for (int i = 0; i < n; i++)
@@ -318,7 +318,7 @@ void swap(char* a, char* b)
 // W.C.: O(n!)
 bool are_permutations(char word1[], char word2[], const int size, int index)
 {
-    if(index + 1 == size)
+    if (index + 1 == size)
     {
         return strcmp(word1, word2) == 0;
     }
@@ -338,8 +338,8 @@ bool are_permutations(char word1[], char word2[], const int size, int index)
 // Time complexity: O(sorting-alg-complexity + n) = O(sorting-alg-complexity) // minimum: O(n*log(n))
 bool are_permutations_with_sort(char word1[], char word2[], const int size)
 {
-    sort(word1, size);
-    sort(word2, size);
+    // sort(word1, size);
+    // sort(word2, size);
 
     for (int i = 0; i < size; i++)
     {
