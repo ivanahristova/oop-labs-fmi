@@ -52,16 +52,14 @@ void swap(double* a, double* b)
     *b = tmp;
 }
 
-void swap_strings(char a[default_max_len], char b[default_max_len])
+void swap(char a[default_max_len], char b[default_max_len])
 {
     // store one string temporarily
-    char* tmp = new char[default_max_len];
+    char tmp[default_max_len];
     strcpy(tmp, a);
 
     strcpy(a, b);
     strcpy(b, tmp);
-
-    delete[] tmp;
 }
 
 void sort_grades(Gradebook& gradebook)
@@ -79,7 +77,7 @@ void sort_grades(Gradebook& gradebook)
         }
 
         swap(&gradebook.grades[i], &gradebook.grades[min_index]);
-        swap_strings(gradebook.subject_names[i], gradebook.subject_names[min_index]);
+        swap(gradebook.subject_names[i], gradebook.subject_names[min_index]);
     }
 }
 
@@ -192,7 +190,7 @@ int main()
             << ", can advance: " << can_advance(john_gradebook) << "\n";
 
     add_grade(john_gradebook, 2.2, "Failed another one");
-    std::cout << "\n" << can_advance(john_gradebook) << "\n";
+    std::cout << "\nCan advance with 5: " << can_advance(john_gradebook) << "\n";
 
 
     Gradebook jane_gradebook;
@@ -203,5 +201,5 @@ int main()
     add_grade(jane_gradebook, 6, "Algebra");
     add_grade(jane_gradebook, 5, "Calc");
 
-    std::cout << "\nCan get scholarship: " << can_get_scholarship(jane_gradebook) << "\n";
+    std::cout << "\nJane can get scholarship: " << can_get_scholarship(jane_gradebook) << "\n";
 }
