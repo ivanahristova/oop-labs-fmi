@@ -1,6 +1,19 @@
 # ООП-практикум, група 8
 
-## Конспект
+## :books: Упражнения
+| № | Тема |
+| --- | --- |
+| 1. | [Сложност](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/01-complexity) |
+| 2. | [Структури](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/02-structs-intro) |
+| 3. | [Текстови файлове](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/03-text-files) |
+
+&nbsp;
+
+## :movie_camera: [Връзка към записи от упражнения](https://drive.google.com/drive/u/1/folders/1mBAXc9r9vMQREvZP72JfAC1Qonca3cTe)
+
+&nbsp;
+
+## :bookmark_tabs: Конспект за курса по ООП
 | № | Тема |
 | --- | --- |
 | 1. | Сложност - времева и пространствена сложност. |

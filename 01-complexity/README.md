@@ -4,7 +4,6 @@
 1. [Примери](https://www.geeksforgeeks.org/practice-questions-time-complexity-analysis/)
 2. [Задачи](https://chalmers.instructure.com/courses/7567/assignments/8031)
       * [Отговори](https://chalmers.instructure.com/courses/7567/pages/exercises-week-2-complexity-solutions)
-### [Линк към упражнение](https://drive.google.com/drive/u/1/folders/1mBAXc9r9vMQREvZP72JfAC1Qonca3cTe)
 ---
 
 **Сложност:** Скоростта на нарастването на времето и паметта, необходими за изпълнението на даден алгоритъм, с нарастването на входните данни.
