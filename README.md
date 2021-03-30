@@ -8,6 +8,7 @@
 | 3. | [Текстови файлове (част 1)](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/03-04-text-files) |
 | 4. | [Текстови файлове (част 2)](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/03-04-text-files) |
 | 5. | [Двоични файлове](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/05-binary-files) |
+| 6. | [Класове](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/06-classes) |
 
 &nbsp;
 
