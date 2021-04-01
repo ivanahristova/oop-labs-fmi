@@ -186,12 +186,12 @@ double Triangle::sin(const char* angle) const
 
 double Triangle::cos(const char* angle) const
 {
-    if(strcmp(angle, "alpha"))
-        return ((b*b+c*c-a*a)/(2*b*c) == 0);
-    if(strcmp(angle, "beta"))
-        return ((a*a+c*c-b*b)/(2*a*c) == 0);
-    if(strcmp(angle, "gamma")==1)
-        return ((a*a+b*b-c*c)/(2*a*b) == 0);       
+    if(strcmp(angle, "alpha") == 0)
+        return ((b*b+c*c-a*a)/(2*b*c));
+    if(strcmp(angle, "beta") == 0)
+        return ((a*a+c*c-b*b)/(2*a*c));
+    if(strcmp(angle, "gamma") == 0)
+        return ((a*a+b*b-c*c)/(2*a*b));       
     return -1;
 }
 double Triangle::inradius() const
