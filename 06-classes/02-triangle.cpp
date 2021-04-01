@@ -122,12 +122,18 @@ double Triangle::semi_perimeter() const
 
 double Triangle::angle_bisector(char side) const
 {
-    if(side == 'c')
+    if (side == 'c')
+    {
         return sqrt(a*b-(a*b*c*c)/((a+b)*(a+b)));
-    if(side == 'b')
+    }
+    if (side == 'b')
+    {
         return sqrt(a*c-(a*b*b*c)/((a+c)*(a+c)));
-    if(side == 'a')
+    }
+    if (side == 'a')
+    {
         return sqrt((b*c-(a*a*b*c)/(b+c)*(b+c)));
+    }
     return -1;
 }
 
@@ -175,23 +181,35 @@ double Triangle::sin(const char* angle) const
 {   
     double s = area();
     
-    if(strcmp(angle, "alpha") == 0)
+    if (strcmp(angle, "alpha") == 0)
+    {
         return ((s*2)/(b*c));
-    if(strcmp(angle, "beta") == 0)
+    }
+    if (strcmp(angle, "beta") == 0)
+    {
         return ((s*2)/(a*c));
-    if(strcmp(angle, "gamma") == 0)
+    }
+    if (strcmp(angle, "gamma") == 0)
+    {
         return ((s*2)/(a*b));
+    }
     return -1;
 }
 
 double Triangle::cos(const char* angle) const
 {
-    if(strcmp(angle, "alpha") == 0)
+    if (strcmp(angle, "alpha") == 0)
+    {
         return ((b*b+c*c-a*a)/(2*b*c));
-    if(strcmp(angle, "beta") == 0)
+    }
+    if (strcmp(angle, "beta") == 0)
+    {
         return ((a*a+c*c-b*b)/(2*a*c));
-    if(strcmp(angle, "gamma") == 0)
-        return ((a*a+b*b-c*c)/(2*a*b));       
+    }
+    if (strcmp(angle, "gamma") == 0)
+    {
+        return ((a*a+b*b-c*c)/(2*a*b));
+    }
     return -1;
 }
 double Triangle::inradius() const
