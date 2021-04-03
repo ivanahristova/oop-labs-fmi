@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-
+#include <cstring>
 class Triangle 
 {
 private:
@@ -26,10 +26,15 @@ public:
     void set_c(double c);
 
     double perimeter() const;
+    double semi_perimeter() const;
     double area() const;
     double height(char side) const;
     double median(char side) const;
     double inradius() const;
+    double circumscribed_circle_radius() const;
+    double angle_bisector(char side) const;
+    double sin(const char* angle) const;
+    double cos(const char* angle) const;
 
     void print() const;
 };
@@ -110,9 +115,31 @@ double Triangle::perimeter() const
     return a + b + c;
 }
 
+double Triangle::semi_perimeter() const
+{
+    return (a+b+c)/2;
+}
+
+double Triangle::angle_bisector(char side) const
+{
+    if (side == 'c')
+    {
+        return sqrt(a*b-(a*b*c*c)/((a+b)*(a+b)));
+    }
+    if (side == 'b')
+    {
+        return sqrt(a*c-(a*b*b*c)/((a+c)*(a+c)));
+    }
+    if (side == 'a')
+    {
+        return sqrt((b*c-(a*a*b*c)/(b+c)*(b+c)));
+    }
+    return -1;
+}
+
 double Triangle::area() const
 {
-    double p = perimeter() / 2;
+    double p = semi_perimeter();
     return sqrt(p * (p - a) * (p - b) * (p - c));
 }
 
@@ -150,23 +177,60 @@ double Triangle::median(char side) const
     return -1;
 }
 
-double Triangle::inradius() const
-{
-    double s = perimeter() / 2;
-    return sqrt(((s - a) * (s - b) * (s - c)) / s);
+double Triangle::sin(const char* angle) const
+{   
+    double s = area();
+    
+    if (strcmp(angle, "alpha") == 0)
+    {
+        return ((s*2)/(b*c));
+    }
+    if (strcmp(angle, "beta") == 0)
+    {
+        return ((s*2)/(a*c));
+    }
+    if (strcmp(angle, "gamma") == 0)
+    {
+        return ((s*2)/(a*b));
+    }
+    return -1;
 }
 
+double Triangle::cos(const char* angle) const
+{
+    if (strcmp(angle, "alpha") == 0)
+    {
+        return ((b*b+c*c-a*a)/(2*b*c));
+    }
+    if (strcmp(angle, "beta") == 0)
+    {
+        return ((a*a+c*c-b*b)/(2*a*c));
+    }
+    if (strcmp(angle, "gamma") == 0)
+    {
+        return ((a*a+b*b-c*c)/(2*a*b));
+    }
+    return -1;
+}
+double Triangle::inradius() const
+{
+    double s = semi_perimeter();
+    return sqrt(((s - a) * (s - b) * (s - c)) / s);
+}
+double Triangle::circumscribed_circle_radius() const
+{
+    double s = area();
+    return (a*b*c/(4*s));
+}
 void Triangle::print() const
 {
     std::cout << "P: " << perimeter() << '\n';
     std::cout << "S: " << area() << '\n';
-    std::cout << "h_a: " << height('a') << '\n';
-    std::cout << "h_b: " << height('b') << '\n';
-    std::cout << "h_c: " << height('c') << '\n';
-    std::cout << "m_a: " << median('a') << '\n';
-    std::cout << "m_b: " << median('b') << '\n';
-    std::cout << "m_c: " << median('c') << '\n';
-    std::cout << "r: " << inradius() << '\n';
+    std::cout << "p: " << semi_perimeter() << '\n';
+    std::cout << "Lc: " << angle_bisector('c') << '\n';
+    std::cout << "R: " << circumscribed_circle_radius() << '\n';
+    std::cout << "sin(gamma): " << sin("gamma") << '\n';
+    std::cout << "cos(gamma): " << cos("gamma") << '\n';
 }
 
 int main()
@@ -175,13 +239,7 @@ int main()
     Triangle right_t(3, 4, 5);
     right_t.print();
 
-    std::cout << "\nTriangle 2" << '\n';
-    Triangle random_t(10, 8, 17);
-    random_t.print();
-
-    std::cout << "\nTriangle 3" << '\n';
-    Triangle invalid(10, -8, 17);
-    invalid.print();
+    
 
     return 0;
 }
