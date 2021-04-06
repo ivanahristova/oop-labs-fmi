@@ -1,0 +1,17 @@
+shell
+define
+oop
+fmi
+lab
+word
+highlighter
+water
+university
+limit
+phone
+digital
+English
+charger
+mouse
+keyboard
+test
