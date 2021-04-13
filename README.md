@@ -9,7 +9,7 @@
 | 4. | [Текстови файлове (част 2)](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/03-04-text-files) |
 | 5. | [Двоични файлове](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/05-binary-files) |
 | 6. | [Класове](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/06-classes) |
-| 7. | [Голяма четворка](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/07-big-4) |
+| 7. | [Голяма тройка](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/07-big-3) |
 
 &nbsp;
 
