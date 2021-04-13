@@ -44,6 +44,18 @@ ClassName& operator=(ClassName&& other) noexcept;
 
 **[`std::move`](https://en.cppreference.com/w/cpp/utility/move)** – служи за вземане на `rvalue reference` от обект
 
+Ето какъв е резултатът при:
+
+- деактивиран [return value optimization](https://en.wikipedia.org/wiki/Copy_elision#Return_value_optimization)
+и недефиниран `move`:
+![No RVO, no move](../img/08-01-no-rvo-no-move.png)
+
+- деактивиран RVO и дефиниран `move`:
+![No RVO, with move](../img/08-02-no-rvo-move.png)
+
+- активиран RVO (по подразбиране):
+![No RVO, with move](../img/08-03-rvo.png)
+
 &nbsp;
 
 ## Предефиниране на оператори
