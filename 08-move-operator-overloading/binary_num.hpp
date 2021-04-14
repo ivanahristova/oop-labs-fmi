@@ -23,6 +23,11 @@ public:
 
     BinaryNum operator&(const BinaryNum& other);
 
+    friend std::ostream& operator<<(std::ostream& o_stream, const BinaryNum& num);
+    friend std::istream& operator>>(std::istream& i_stream, BinaryNum& num);
+
+    BinaryNum operator>>(int shift_by);
+
     const char* get_str();
 
 private:
@@ -31,10 +36,9 @@ private:
     int get_needed_capacity(const char* digits_str);
     bool is_valid_bin_digit(char ch);
     int get_start_of_number(const char* digits_str);
-
-    friend std::ostream& operator<<(std::ostream& o_stream, const BinaryNum& num);
 };
 
-std::ostream& operator<<(std::ostream& o_stream, const BinaryNum& num);
+// std::ostream& operator<<(std::ostream& o_stream, const BinaryNum& num);
+// std::istream& operator>>(std::istream& i_stream, BinaryNum& num);
 
 #endif // BINARY_NUM_HPP

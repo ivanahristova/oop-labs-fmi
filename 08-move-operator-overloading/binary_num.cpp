@@ -5,7 +5,7 @@
 BinaryNum::BinaryNum()
     : digits_capacity(1), digits_count(1)
 {
-    std::cout << "Constr\n";
+    // std::cout << "Constr\n";
 
     digits = new char[digits_capacity + 1];
 
@@ -16,7 +16,7 @@ BinaryNum::BinaryNum()
 BinaryNum::BinaryNum(const char* digits_str)
     : digits_capacity(get_needed_capacity(digits_str)), digits_count(0)
 {
-    std::cout << "Constr char*\n";
+    // std::cout << "Constr char*\n";
 
     int i = get_start_of_number(digits_str);
 
@@ -44,13 +44,13 @@ BinaryNum::BinaryNum(const char* digits_str)
 
 BinaryNum::BinaryNum(const BinaryNum& other)
 {
-    std::cout << "Copy constr\n";
+    // std::cout << "Copy constr\n";
     copy_from(other);
 }
 
 BinaryNum& BinaryNum::operator=(const BinaryNum& other)
 {
-    std::cout << "Copy assign\n";
+    // std::cout << "Copy assign\n";
     if (this != &other)
     {
         free_memory();
@@ -62,13 +62,13 @@ BinaryNum& BinaryNum::operator=(const BinaryNum& other)
 
 BinaryNum::~BinaryNum()
 {
-    std::cout << "Destr\n";
+    // std::cout << "Destr\n";
     free_memory();
 }
 
 BinaryNum::BinaryNum(BinaryNum&& other) noexcept
 {
-    std::cout << "Move constr\n";
+    // std::cout << "Move constr\n";
 
     digits_capacity = other.digits_capacity;
     digits_count = other.digits_count;
@@ -79,7 +79,7 @@ BinaryNum::BinaryNum(BinaryNum&& other) noexcept
 
 BinaryNum& BinaryNum::operator=(BinaryNum&& other) noexcept
 {
-    std::cout << "Move assign\n";
+    // std::cout << "Move assign\n";
 
     free_memory();
 
@@ -187,3 +187,66 @@ const char* BinaryNum::get_str()
 }
 
 // TODO: operator<<, operator>>
+std::ostream& operator<<(std::ostream& o_stream, const BinaryNum& num)
+{
+    o_stream << num.digits;
+
+    return o_stream;
+}
+
+std::istream& operator>>(std::istream& i_stream, BinaryNum& num)
+{
+    int digits_capacity = 4;
+    int digits_count = 0;
+    char* digits_str = new char[digits_capacity];
+
+    // skip whitespace or invalid
+    while (i_stream.peek() != '1')
+    {
+        i_stream.get();
+    }
+
+    char curr_char = i_stream.get();
+
+    while (curr_char != ' ' && curr_char != '\t' && curr_char != '\r'
+            && num.is_valid_bin_digit(curr_char))
+    {
+        if (digits_count >= digits_capacity)
+        {
+            char* bigger = new char[digits_capacity * 2];
+            digits_capacity *= 2;
+
+            strcpy(bigger, digits_str);
+
+            delete[] digits_str;
+            digits_str = bigger;
+        }
+
+        digits_str[digits_count++] = curr_char;
+        curr_char = i_stream.get();
+    }
+
+    digits_str[digits_count] = '\0';
+    num = digits_str;
+
+
+    delete[] digits_str;
+
+    return i_stream;
+}
+
+BinaryNum BinaryNum::operator>>(int shift_by)
+{
+    BinaryNum result = *this;
+
+    if (result.digits_count == 1)
+    {
+        strcpy(result.digits, "0");
+        return result;
+    }
+
+    result.digits[result.digits_count - 1] = '\0';
+    result.digits_count--;
+
+    return result;
+}
