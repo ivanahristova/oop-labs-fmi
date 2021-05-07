@@ -28,7 +28,7 @@
 | 3. Носи същото име като класа. |
 | 4. Когато не го дефинираме, такъв се създава по подразбиране. |
 | 5. Трябва да го дефинираме когато имаме по-сложни типове за копиране,<br />за които изискваме специално поведение (например при пойнтъри и динамично заделяне на памет). |
-| Подробна инфромация можете да намерите [тук](https://en.cppreference.com/w/cpp/language/copy_constructor) и [тук](https://www.geeksforgeeks.org/copy-constructor-in-cpp/). |
+| Подробна информация можете да намерите [тук](https://en.cppreference.com/w/cpp/language/copy_constructor) и [тук](https://www.geeksforgeeks.org/copy-constructor-in-cpp/). |
 
 &nbsp;
 | Oператор = |

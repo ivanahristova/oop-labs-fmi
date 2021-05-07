@@ -10,6 +10,9 @@
 | 5. | [Двоични файлове](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/05-binary-files) |
 | 6. | [Класове](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/06-classes) |
 | 7. | [Голяма тройка](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/07-big-3) |
+| 8. | [Голяма петица. Предефиниране на оператори](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/08-move-operator-overloading) |
+| 9. | [Шаблони](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/09-templates) |
+| 10. | [Изключения](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/10-exceptions) |
 
 &nbsp;
 
