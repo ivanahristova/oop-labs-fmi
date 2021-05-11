@@ -13,6 +13,7 @@
 | 8. | [Голяма петица. Предефиниране на оператори](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/08-move-operator-overloading) |
 | 9. | [Шаблони](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/09-templates) |
 | 10. | [Изключения](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/10-exceptions) |
+| 11. | [Наследяване](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/11-inheritance) |
 
 &nbsp;
 
