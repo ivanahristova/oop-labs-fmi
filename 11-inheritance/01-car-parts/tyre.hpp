@@ -25,6 +25,12 @@ private:
 public:
     Tyre(const char* id, const char* manufacturer, const char* description,
          int width, int profile, int rim_size);
+
+    int get_width() const;
+    int get_profile() const;
+    int get_rim_size() const;
 };
+
+std::ostream& operator<<(std::ostream& o_stream, const Tyre& tyre);
 
 #endif // TYPE_HPP

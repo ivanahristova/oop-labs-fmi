@@ -22,6 +22,10 @@ public:
     Battery(const Battery& other);
     const Battery& operator=(const Battery& other);
     ~Battery();
+
+    int get_amp_hours() const;
 };
+
+std::ostream& operator<<(std::ostream& o_stream, const Battery& battery);
 
 #endif // BATTERY_HPP

@@ -8,9 +8,15 @@ Engine::Engine(const char* id, const char* manufacturer, const char* description
     set_horsepower(horsepower);
 }
 
-int Engine::get_horsepower()
+int Engine::get_horsepower() const
 {
     return horsepower;
+}
+
+std::ostream& operator<<(std::ostream& o_stream, const Engine& engine)
+{
+    o_stream << (const CarPart&)engine;
+    return o_stream << " – " << engine.get_horsepower() << " hp";
 }
 
 void Engine::set_horsepower(int horsepower)

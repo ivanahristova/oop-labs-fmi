@@ -22,6 +22,8 @@ private:
     void set_id(const char* id);
     void copy_from(const CarPart& other);
     void free_memory();
+
+    friend std::ostream& operator<<(std::ostream& o_stream, const CarPart& CarPart);
 };
 
 #endif // CarPart_HPP

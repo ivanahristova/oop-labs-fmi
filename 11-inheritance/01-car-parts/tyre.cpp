@@ -39,3 +39,24 @@ void Tyre::set_rim_size(int rim_size)
 
     this->rim_size = rim_size;
 }
+
+int Tyre::get_width() const
+{
+    return width;
+}
+int Tyre::get_profile() const
+{
+    return profile;
+}
+int Tyre::get_rim_size() const
+{
+    return rim_size;
+}
+
+std::ostream& operator<<(std::ostream& o_stream, const Tyre& tyre)
+{
+    o_stream << (const CarPart&)tyre;
+    return o_stream << " – " << tyre.get_width()
+                    << "/" << tyre.get_profile()
+                    << "R" << tyre.get_rim_size();
+}
