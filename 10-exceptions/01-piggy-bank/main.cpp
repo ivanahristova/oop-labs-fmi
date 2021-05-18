@@ -1,4 +1,4 @@
-#include "02-piggy-bank.h"
+#include "piggy-bank.h"
 
 int main()
 {
