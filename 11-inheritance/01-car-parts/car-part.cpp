@@ -75,3 +75,10 @@ void CarPart::set_manufacturer(const char* manufacturer)
     this->manufacturer = new char[strlen(manufacturer) + 1];
     strcpy(this->manufacturer, manufacturer);
 }
+
+std::ostream& operator<<(std::ostream& o_stream, const CarPart& CarPart)
+{
+    return o_stream << "(" << CarPart.id << ") by "
+            << CarPart.manufacturer << " – "
+            << CarPart.description;
+}

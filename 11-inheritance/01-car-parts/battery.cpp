@@ -64,3 +64,14 @@ Battery::~Battery()
 {
     free_memory();
 }
+
+int Battery::get_amp_hours() const
+{
+    return amp_hours;
+}
+
+std::ostream& operator<<(std::ostream& o_stream, const Battery& battery)
+{
+    o_stream << (const CarPart&)battery;
+    return o_stream << " – " << battery.get_amp_hours() << " Ah";
+}
