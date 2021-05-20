@@ -16,6 +16,6 @@ int main()
     warehouse.print_statistics();
     std::cout << '\n';
 
-    std::cout << "Total: " << warehouse.get_total_price_of_items() << " lv\n";
+    std::cout << "Total: " << warehouse.get_total_price_of_items() << '\n';
 
 }

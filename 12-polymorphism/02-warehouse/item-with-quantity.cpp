@@ -9,7 +9,7 @@ ItemWithQuantity::ItemWithQuantity(const char* name, double price, int quantity)
 
 double ItemWithQuantity::get_item_price() const 
 {
-    return price / 100;
+    return price;
 }
 
 double ItemWithQuantity::get_total_price() const

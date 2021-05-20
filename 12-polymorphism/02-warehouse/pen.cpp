@@ -5,5 +5,5 @@ Pen::Pen(const char* name, double price, int quantity, int ink_quantity)
 
 double Pen::get_item_price() const 
 {
-    return ink_quantity * price / 100;
+    return ink_quantity * price;
 }
