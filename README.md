@@ -15,6 +15,7 @@
 | 10. | [Изключения](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/10-exceptions) |
 | 11. | [Наследяване](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/11-inheritance) |
 | 12. | [Полиморфизъм](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/12-polymorphism) |
+| 13. | [Полиморфизъм](https://github.com/IvanaHristova/oop-labs-fmi/tree/main/13-polymorphism) |
 
 &nbsp;
 
