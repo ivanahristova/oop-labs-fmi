@@ -128,6 +128,7 @@ virtual /*return type*/ method(/*parameters*/) = 0;
   ![Destructor of base class is virtual](../img/12-02-virtual-destr.png)
 
 Извод: правете деструктора на базовия клас виртуален.
+Дори той самият да е празен, важно е да бъде виртуален.
 
 ## Задачи
 

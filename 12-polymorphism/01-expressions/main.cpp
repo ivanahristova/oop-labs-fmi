@@ -5,7 +5,7 @@ class Expression
 {
 public:
     virtual double evaluate() const = 0;
-    // virtual ~Expression() = default;
+    virtual ~Expression() {}
 };
 
 class Constant : public Expression
@@ -85,14 +85,14 @@ int main()
 
     std::cout << res->evaluate() << "\n";
 
-    delete[] one;
-    delete[] two;
-    delete[] four;
-    delete[] negOne;
-    delete[] sumTwoFour;
-    delete[] mult;
-    delete[] exp;
-    delete[] res;
+    delete one;
+    delete two;
+    delete four;
+    delete negOne;
+    delete sumTwoFour;
+    delete mult;
+    delete exp;
+    delete res;
 
     return 0;
 }
