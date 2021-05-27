@@ -14,6 +14,7 @@ class Action
 public:
     virtual void execute() = 0;
     virtual const char* get_description() const = 0;
+    virtual ~Action() {}
 };
 
 class EmptyAction : public Action
@@ -30,7 +31,7 @@ class LightSurroundings : public Action
 private:
     Board* board;
     Position position;
-    
+
 public:
     LightSurroundings(Board* board, Position position);
 

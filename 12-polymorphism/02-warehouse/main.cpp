@@ -18,4 +18,7 @@ int main()
 
     std::cout << "Total: " << warehouse.get_total_price_of_items() << '\n';
 
+    delete p1;
+    delete p2;
+    delete p3;
 }

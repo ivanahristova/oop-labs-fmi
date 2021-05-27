@@ -5,6 +5,7 @@ class Expression
 {
 public:
     virtual double evaluate() const = 0;
+    // virtual ~Expression() = default;
 };
 
 class Constant : public Expression
@@ -75,14 +76,16 @@ int main()
 {
     Expression* two = new Constant(2);
     Expression* four = new Constant(4);
-    Expression* negOne = new Negated(new Constant(1));
+    Expression* one = new Constant(1);
+    Expression* negOne = new Negated(one);
     Expression* sumTwoFour = new Addition(two, four);
     Expression* mult = new Multiplication(sumTwoFour, negOne);
     Expression* exp = new Exponent(mult, 2);
-    Expression* res = new Addition(exp, new Constant(1));
+    Expression* res = new Addition(exp, one);
 
     std::cout << res->evaluate() << "\n";
 
+    delete[] one;
     delete[] two;
     delete[] four;
     delete[] negOne;

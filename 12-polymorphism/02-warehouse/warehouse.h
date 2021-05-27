@@ -5,12 +5,18 @@
 
 class Warehouse
 {
+private:
     ItemWithQuantity** items;
     int items_count;
     int items_capacity;
 
-public: 
+    void copy_from(const Warehouse& other);
+    void free_memory();
+public:
     Warehouse();
+    Warehouse(const Warehouse& other);
+    Warehouse& operator=(const Warehouse& other);
+    ~Warehouse();
 
     void add_product(ItemWithQuantity* item);
 
