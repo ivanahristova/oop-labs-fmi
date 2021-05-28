@@ -119,11 +119,11 @@ virtual /*return type*/ method(/*parameters*/) = 0;
 `p1`, `p2` и `p3` са от тип `ItemWithQuantity*`, но съдържат информация за `Pen`.
 
 Ако изпълним `main` и:
-- конструкторът на `ItemWithQuantity` **не е** виртуален:
+- деструкторът на `ItemWithQuantity` **не е** виртуален:
 
   ![Destructor of base class is not virtual](../img/12-01-no-virtual-destr.png)
 
-- конструкторът на `ItemWithQuantity` **е** виртуален:
+- деструкторът на `ItemWithQuantity` **е** виртуален:
 
   ![Destructor of base class is virtual](../img/12-02-virtual-destr.png)
 
