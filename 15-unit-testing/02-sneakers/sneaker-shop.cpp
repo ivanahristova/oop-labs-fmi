@@ -142,9 +142,6 @@ void SneakerShop::change_quantity_for_model(std::istream& i_stream, std::ostream
             catch(const std::out_of_range& e)
             {
                 std::cerr << e.what() << '\n';
-                reset_i_stream(i_stream);
-                reset_o_stream(o_stream);
-                return;
             }
         }
 
